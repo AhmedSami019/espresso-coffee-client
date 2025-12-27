@@ -1,3 +1,4 @@
+import { Eye, Pencil, Trash } from "lucide-react";
 import React from "react";
 
 const CoffeeCard = ({ coffee }) => {
@@ -15,9 +16,9 @@ const CoffeeCard = ({ coffee }) => {
         </div>
         <div className="justify-end">
           <div className="join join-vertical space-y-4">
-            <button className="btn join-item">Button</button>
-            <button className="btn join-item">Button</button>
-            <button className="btn join-item">Button</button>
+            <button className="btn join-item bg-[#D2B48C]"><Eye color="white"/></button>
+            <button className="btn join-item bg-black"><Pencil color="white"/></button>
+            <button className="btn join-item bg-red-500"><Trash color="white"/></button>
           </div>
         </div>
       </div>
