@@ -46,6 +46,11 @@ const handleViewDetails = (id)=> {
     navigate(`/coffees/${id}`)
 }
 
+// to go on update coffee page
+const handleUpdateCoffee = (id)=> {
+    navigate(`updateCoffee/${id}`)
+}
+
   return (
     <div className="card card-side bg-base-100 shadow-sm border">
       <figure className="w-4/12">
@@ -65,7 +70,7 @@ const handleViewDetails = (id)=> {
             >
               <Eye color="white" />
             </button>
-            <button className="btn join-item bg-black">
+            <button onClick={()=>handleUpdateCoffee(_id)} className="btn join-item bg-black">
               <Pencil color="white" />
             </button>
             <button
