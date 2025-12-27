@@ -11,6 +11,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
+                loader: ()=> fetch("http://localhost:3003/coffees"),
                 Component: Home
             },
             {

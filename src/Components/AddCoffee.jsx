@@ -30,13 +30,14 @@ const AddCoffee = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log("after add in mongodb", data);
+        // console.log("after add in mongodb", data);
         if (data.insertedId) {
           Swal.fire({
-            title: "Drag me!",
+            title: "coffee added successfully",
             icon: "success",
-            draggable: true,
+            timer: 1500
           });
+          form.reset()
         }
       });
   };
@@ -93,12 +94,12 @@ const AddCoffee = () => {
               />
             </fieldset>
             <fieldset className="fieldset border-base-300 rounded-box  border p-4">
-              <label className="label text-black">Category</label>
+              <label className="label text-black">Price</label>
               <input
                 type="text"
-                name="category"
+                name="price"
                 className="input w-full"
-                placeholder="Category"
+                placeholder="price"
               />
             </fieldset>
             <fieldset className="fieldset border-base-300 rounded-box  border p-4">
