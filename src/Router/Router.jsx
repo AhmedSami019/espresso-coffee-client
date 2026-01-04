@@ -4,6 +4,7 @@ import Home from "../Components/Home";
 import AddCoffee from "../Components/AddCoffee";
 import UpdateCoffee from "../Components/UpdateCoffee";
 import CoffeeDetails from "../Components/CoffeeDetails";
+import About from "../Pages/About";
 
 export const router = createBrowserRouter([
     {
@@ -28,6 +29,10 @@ export const router = createBrowserRouter([
                 path: 'updateCoffee/:id',
                 loader: ({params})=> fetch(`http://localhost:3003/coffees/${params.id}`),
                 Component: UpdateCoffee
+            },
+            {
+                path: "about",
+                Component: About
             }
         ]
     }
