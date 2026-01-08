@@ -21,7 +21,7 @@ const AddCoffee = () => {
     // console.log(newCoffee);
 
     // post fetch
-    fetch("http://localhost:3003/coffees", {
+    fetch("https://coffee-store-server-kappa-steel.vercel.app/coffees", {
       method: "POST",
       headers: {
         "content-type": "application/json",

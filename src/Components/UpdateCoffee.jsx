@@ -26,7 +26,7 @@ const navigate = useNavigate()
       confirmButtonText: "Yes, update it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:3003/coffees/${_id}`, {
+        fetch(`https://coffee-store-server-kappa-steel.vercel.app/coffees/${_id}`, {
           method: "PUT",
           headers: {
             "content-type": "application/json",

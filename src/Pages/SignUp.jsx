@@ -18,7 +18,7 @@ const SignUp = () => {
     createUserWithEmail(email, password)
       .then((result) => {
         console.log(result);
-        fetch("http://localhost:3003/users", {
+        fetch("https://coffee-store-server-kappa-steel.vercel.app/users", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

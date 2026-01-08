@@ -15,12 +15,12 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                loader: ()=> fetch("http://localhost:3003/coffees"),
+                loader: ()=> fetch("https://coffee-store-server-kappa-steel.vercel.app/coffees"),
                 Component: Home
             },
             {
                 path: 'coffees/:id',
-                loader: ({params})=> fetch(`http://localhost:3003/coffees/${params.id}`),
+                loader: ({params})=> fetch(`https://coffee-store-server-kappa-steel.vercel.app/coffees/${params.id}`),
                 Component: CoffeeDetails
             },
             {
@@ -29,7 +29,7 @@ export const router = createBrowserRouter([
             }, 
             {
                 path: 'updateCoffee/:id',
-                loader: ({params})=> fetch(`http://localhost:3003/coffees/${params.id}`),
+                loader: ({params})=> fetch(`https://coffee-store-server-kappa-steel.vercel.app/coffees/${params.id}`),
                 Component: UpdateCoffee
             },
             {
